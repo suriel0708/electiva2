@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reloj Digital</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background: linear-gradient(45deg, #2196f3, #e91e63);
-        color: white;
-      }
-      #clock {
-        font-size: 3em;
-        padding: 20px;
-        border: 2px solid white;
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
-        text-align: center;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reloj Digital</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #2196f3, #e91e63);
+            color: white;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px;
+        }
+
+        #clock {
+            font-size: 3em;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9em;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
-  </head>
-  <body>
-    <div id="clock"></div>
-    <script>
+    </head>
+    <body>
+        <h1>Electiva 2</h1>
+
+        <div id="clock"></div>
+
+        <footer>
+            &copy; 2025 Electiva 2 | Desarrollado por Suliel Rodriguez Quezada |
+            2019-7706
+        </footer>
+
+        <script>
       function updateClock() {
         const now = new Date();
         const hours = String(now.getHours()).padStart(2, "0");
@@ -41,5 +66,5 @@
       setInterval(updateClock, 1000);
       updateClock(); // Llamada inicial para que aparezca de inmediato
     </script>
-  </body>
+    </body>
 </html>
